@@ -69,7 +69,14 @@
 							"inputs": [
 								{
 									"referenceName": "DataSetAdvt2022",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"TableSchema": {
+											"value": "@first(split(item().TableName, '.'))",
+											"type": "Expression"
+										},
+										"TableName": "@last(split(item().TableName, '.'))"
+									}
 								}
 							]
 						}
