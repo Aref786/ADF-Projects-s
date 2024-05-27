@@ -1,0 +1,6 @@
+{
+	"name": "SelfHostedIntRuntime",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
