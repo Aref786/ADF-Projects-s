@@ -16,12 +16,12 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT TABLE_SCHEMA+'.'+TABLE_NAME AS TableName\nFROM INFORMATION_SCHEMA.TABLES\nWHERE TABLE_SCHEMA='Production' or TABLE_SCHEMA='Sales'",
+						"type": "SqlServerSource",
+						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "AzureSqlLinkServiceAdVDB",
+						"referenceName": "SqlServerDataSetAdvtToTables",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
@@ -68,7 +68,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "SqlServerDataSetAdvtToTables",
+									"referenceName": "DataSetAdvt2022",
 									"type": "DatasetReference"
 								}
 							]

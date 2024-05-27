@@ -5,28 +5,12 @@
 			"referenceName": "SqlServerLinkdService",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"TableName": {
-				"type": "string",
-				"defaultValue": "0"
-			},
-			"Schema": {
-				"type": "string",
-				"defaultValue": "0"
-			}
-		},
 		"annotations": [],
 		"type": "SqlServerTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": {
-				"value": "@dataset().Schema",
-				"type": "Expression"
-			},
-			"table": {
-				"value": "@dataset().TableName",
-				"type": "Expression"
-			}
+			"schema": "dbo",
+			"table": "AlltablesName"
 		}
 	}
 }
