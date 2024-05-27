@@ -1,0 +1,21 @@
+{
+	"name": "DataSet_For_AllT_ablesData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LinkedSer_AzureBlobStorage_alldataCSV",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

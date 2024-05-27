@@ -6,11 +6,11 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"TableName": {
+			"TableSchema": {
 				"type": "string",
 				"defaultValue": "0"
 			},
-			"TableSchema": {
+			"TableName": {
 				"type": "string",
 				"defaultValue": "0"
 			}
