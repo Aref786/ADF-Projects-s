@@ -1,0 +1,9 @@
+{
+	"name": "ADF2024-Project",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b9b892cc-05ec-4063-a04a-d9155a4557e0",
+		"tenantId": "3cfdd6ba-115d-41b4-9c49-7dc0ca26ca92"
+	}
+}
