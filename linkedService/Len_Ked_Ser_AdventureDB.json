@@ -5,9 +5,9 @@
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
-			"connectionString": "integrated security=True;data source=AREF\\SQLEXPRESS;initial catalog=AdventureWorks2022",
+			"connectionString": "integrated security=True;data source=AREF\\SQLEXPRESS;initial catalog=AdventureWorks",
 			"userName": "Aref",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI5NmYwMmNkMi0zZmU0LTRkMWEtYTk2Zi1hOGVhNmMzMWFjNjIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJhZjhmYWQ5YS1lYzA5LTRmMWMtYjc0Yy01MTg5NWE5OWMyMjUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "SelfHostedRuntime-01",
