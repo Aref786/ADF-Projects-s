@@ -1,0 +1,17 @@
+{
+	"name": "SqlServerDataSet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Len_Ked_Ser_DemoDB",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "IntrnationalSales"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,17 @@
+{
+	"name": "AzureSqlDataSet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Link_Service_AzureSqlDEMO",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "TEMP"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,17 @@
+{
+	"name": "Len_Ked_Ser_DemoDB",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=AREF\\SQLEXPRESS;initial catalog=DEMO",
+			"userName": "Aref",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI3MGVhZjk5YS0zY2Q1LTRkYzUtOGMyMi00ZjQ5MjU2NDEyZjAiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SelfHostedRuntime-01",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

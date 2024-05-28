@@ -1,0 +1,85 @@
+{
+	"name": "Salesana",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					},
+					"name": "SalesUSA"
+				},
+				{
+					"dataset": {
+						"referenceName": "DataSetAllSales",
+						"type": "DatasetReference"
+					},
+					"name": "AllCounteriesSalres"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "AzureSqlDataSet",
+						"type": "DatasetReference"
+					},
+					"name": "DestineationDB"
+				}
+			],
+			"transformations": [
+				{
+					"name": "CountryCol"
+				},
+				{
+					"name": "AllSalesUnion"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          ProductID as string,",
+				"          Date as string,",
+				"          Zip as string,",
+				"          Units as string,",
+				"          Revenue as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> SalesUSA",
+				"source(output(",
+				"          ProductID as string,",
+				"          Date as string,",
+				"          Zip as string,",
+				"          Units as string,",
+				"          Revenue as string,",
+				"          Country as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     wildcardPaths:['*.csv']) ~> AllCounteriesSalres",
+				"SalesUSA derive(Country = 'USA') ~> CountryCol",
+				"CountryCol, AllCounteriesSalres union(byName: true)~> AllSalesUnion",
+				"AllSalesUnion sink(allowSchemaDrift: true,",
+				"     validateSchema: true,",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          ProductID,",
+				"          Date,",
+				"          Zip,",
+				"          Units,",
+				"          Revenue,",
+				"          Country",
+				"     )) ~> DestineationDB"
+			]
+		}
+	}
+}

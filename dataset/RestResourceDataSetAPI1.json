@@ -1,0 +1,16 @@
+{
+	"name": "RestResourceDataSetAPI1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Linked_Service_RestAPI",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "5"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
