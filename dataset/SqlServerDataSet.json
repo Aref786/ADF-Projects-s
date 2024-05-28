@@ -32,7 +32,11 @@
 				"name": "Country",
 				"type": "varchar"
 			}
-		]
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Departments"
+		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
 }
