@@ -1,0 +1,64 @@
+{
+	"name": "AzureSqlTable2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase3",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "StudentId",
+				"type": "nvarchar"
+			},
+			{
+				"name": "StudentCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "StudentName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Date",
+				"type": "date"
+			},
+			{
+				"name": "Language",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Maths",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Physics",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Chemistry",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Computerscience",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "StageCreatedDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "stage",
+			"table": "StudentScores"
+		}
+	}
+}
