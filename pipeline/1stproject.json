@@ -221,8 +221,37 @@
 						"type": "DatasetReference"
 					}
 				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Lookup1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "studentid",
+					"value": {
+						"value": "@activity('Lookup1').output.firstRow.Studentid",
+						"type": "Expression"
+					}
+				}
 			}
 		],
+		"variables": {
+			"studentid": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
