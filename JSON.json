@@ -1,0 +1,28 @@
+{
+  "dag_id": "First",
+  "default_args": {
+    "owner": "Aref",
+    "depends_on_past": false,
+    "email": ["begharef@gmail.com", "arefbegh05@gmail.com"],
+    "email_on_failure": true,
+    "email_on_retry": false,
+    "retries": 1,
+    "retry_delay": "timedelta(minutes=5)",
+    "catchup": false
+  },
+  "start_date": "datetime(2025, 3, 9)",
+  "schedule_interval": "@daily",
+  "description": "First DAG",
+  "tasks": [
+    {
+      "task_id": "is_api_auth",
+      "type": "HttpSensor",
+      "http_conn_id": "Github_api",
+      "endpoint": "",
+      "request_params": {},
+      "response_check": "lambda response: 'true' in response.text",
+      "poke_interval": 5,
+      "timeout": 20
+    }
+  ]
+}
